@@ -28,6 +28,9 @@ namespace NavDemo
 
 		[Outlet]
 		MonoTouch.UIKit.UILabel batteryLabel { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UILabel interactionLabel { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -59,6 +62,11 @@ namespace NavDemo
 			if (batteryLabel != null) {
 				batteryLabel.Dispose ();
 				batteryLabel = null;
+			}
+
+			if (interactionLabel != null) {
+				interactionLabel.Dispose ();
+				interactionLabel = null;
 			}
 		}
 	}
