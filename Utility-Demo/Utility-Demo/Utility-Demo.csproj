@@ -85,6 +85,7 @@
     <Compile Include="Web References\www.w3schools.com\Reference.cs">
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="UIDraggableImageView.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainViewController.xib" />
@@ -100,5 +101,8 @@
       <RelPath>Web References\www.w3schools.com</RelPath>
       <UpdateFromURL>http://www.w3schools.com/WebServices/TempConvert.asmx</UpdateFromURL>
     </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="meme.png" />
   </ItemGroup>
 </Project>

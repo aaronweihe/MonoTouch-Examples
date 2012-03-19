@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
@@ -17,6 +18,12 @@ namespace UtilityDemo
 			base.ViewDidLoad ();
 			
 			// Perform any additional setup after loading the view, typically from a nib.
+			var image = new UIImage("meme.png");
+			var imageView = new UIDraggableImageView(image);
+			var appF = UIScreen.MainScreen.ApplicationFrame;
+			var imgS = image.Size;
+			imageView.Frame = new RectangleF((appF.Width-imgS.Width)/2, (appF.Height-imgS.Height)/2, imgS.Width, imgS.Height);
+			View.AddSubview(imageView);
 		}
 		
 		public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)
